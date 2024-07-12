@@ -1,0 +1,21 @@
+
+import UserInfo from './UserInfo/UserInfo';
+import UserFeatured from './UserFeatured/UserFeatured';
+const UserProfile = () => {
+  return (
+    <section className='container mx-auto px-4'>
+        <div
+        className=" p-8 grid grid-cols-5 bg-[#f6f6f6]"
+        >
+          <div className='col-span-3'>
+              <UserInfo/>
+          </div>
+          <div className='col-span-2'>
+              <UserFeatured/>
+          </div>
+        </div>
+    </section>
+  )
+}
+
+export default UserProfile
