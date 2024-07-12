@@ -20,7 +20,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false)
 
   return (
-    <nav className='bg-[#1B1C1E] py-5 w-full z-10'>
+    <nav className='bg-[#1B1C1E] py-5 w-full z-10 sticky top-0'>
       <div className='container mx-auto px-4 flex justify-between items-center'>
         <div>
           <img className='cursor-pointer' src={logo} alt="Logo" />

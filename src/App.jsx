@@ -3,15 +3,11 @@ import Hero from './components/Hero/Hero';
 import UserProfile from './components/UserProfile/UserProfile';
 const App = () => {
   return (
-    <>
-    <header>
+      <>
       <Navbar/>
       <Hero/>
-    </header>
-    <main>
-      <UserProfile/>
-    </main>
-    </>
+      <UserProfile/>    
+      </>
   )
 }
 
