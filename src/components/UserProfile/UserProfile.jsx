@@ -5,7 +5,7 @@ const UserProfile = () => {
   return (
     <section className='container mx-auto px-4'>
         <div
-        className=" p-8 grid grid-cols-5 bg-[#f6f6f6]"
+        className="p-8 xl:grid grid-cols-5 bg-[#f6f6f6] gap-24"
         >
           <div className='col-span-3'>
               <UserInfo/>

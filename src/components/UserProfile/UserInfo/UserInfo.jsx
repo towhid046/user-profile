@@ -48,16 +48,16 @@ const UserInfo = () => {
         <button className='px-[18px] py-[6px] h-max bg-[#196AA0] text-[#FEFEFE] rounded-full'>Follow</button>
       </div>
 
-      <div className='space-y-4'>
+      <div>
         {articles?.map(article=>(
           <article key={article.id}
-          className='bg-[#f1f1f1] p-4 rounded-[10px] '
+          className='bg-[#f1f1f1] p-4 rounded-[10px] mb-4'
           >
             <h2 className='text-[26px] font-semibold text-[#2B2B2B] mb-3'>{article.title}</h2>
             <p className='font-[300] text-[#5F5F5F] mb-4'>{article.description.split(' ').slice(0, 90).join(' ')}...</p>
             <hr />
             <div className='flex justify-between items-center mt-4'>
-              <ul className='flex items-center gap-3'>
+              <ul className='flex flex-wrap items-center gap-3'>
                 {article?.tags?.map(tag=>(
                   <li key={tag}
                   className='text-[#76A4CE] bg-white rounded-full px-3 py-1'
