@@ -32,7 +32,7 @@ const UserInfo = () => {
       <div className='flex justify-between -mb-16'>
         <div className='flex gap-[26px]'>
         <figure className='relative -top-32'>
-          <img src={userProfilePic} alt="User Profile Pic" />
+          <img className='md:w-[200px] w-[100px]' src={userProfilePic} alt="User Profile Pic" />
         </figure>
           <div>
             <div className='flex items-center gap-2 mb-2'>
