@@ -1,4 +1,5 @@
 import userProfilePic from '../../../assets/images/user_profile/profile-pic.png'
+import UserFeatured from './../UserFeatured/UserFeatured';
 
 
 const articles =  [
@@ -29,23 +30,28 @@ const articles =  [
 const UserInfo = () => {
   return (
     <div>
-      <div className='flex justify-between -mb-16'>
+      
+      <div className='flex justify-between md:-mb-16'>
         <div className='flex gap-[26px]'>
-        <figure className='relative -top-32'>
-          <img className='md:w-[200px] w-[100px]' src={userProfilePic} alt="User Profile Pic" />
+        <figure className='relative lg:-top-32 md:-top-28 -top-20'>
+          <img className='lg:w-[200px] md:w-[150px] w-[100px]' src={userProfilePic} alt="User Profile Pic" />
         </figure>
           <div>
             <div className='flex items-center gap-2 mb-2'>
-              <h2 className='text-[#2B2B2B] text-2xl font-semibold' >John Doe <sub>•</sub></h2>
+              <h2 className='text-[#2B2B2B] md:text-2xl text-xl font-semibold' >John Doe <sub>•</sub></h2>
               <small className='text-[#76A4CE] text-xs font-[300]'>@johndoe</small>
             </div>
-           <div className='text-[14px] font-normal text-[#1B1C1E]'>
+           <div className='text-xs md:text-[14px] font-normal text-[#1B1C1E]'>
              <h3>Astrophotographer 🌌</h3>
              <h3>Gamer 👾</h3>
            </div>
           </div>
         </div>
-        <button className='px-[18px] py-[6px] h-max bg-[#196AA0] text-[#FEFEFE] rounded-full'>Follow</button>
+        <button className='md:px-[18px] px-3 md:py-[6px] py-1 h-max bg-[#196AA0] text-[#FEFEFE] rounded-full'>Follow</button>
+      </div>
+
+      <div className='xl:hidden '>
+        <UserFeatured/>
       </div>
 
       <div>
@@ -56,8 +62,8 @@ const UserInfo = () => {
             <h2 className='text-[26px] font-semibold text-[#2B2B2B] mb-3'>{article.title}</h2>
             <p className='font-[300] text-[#5F5F5F] mb-4'>{article.description.split(' ').slice(0, 90).join(' ')}...</p>
             <hr />
-            <div className='flex justify-between items-center mt-4'>
-              <ul className='flex flex-wrap items-center gap-3'>
+            <div className='flex justify-between mt-4 items-center'>
+              <ul className='flex flex-wrap items-center gap-2'>
                 {article?.tags?.map(tag=>(
                   <li key={tag}
                   className='text-[#76A4CE] bg-white rounded-full px-3 py-1'
@@ -65,7 +71,7 @@ const UserInfo = () => {
                 ))}
                 <li className='text-[#76A4CE] cursor-pointer bg-white rounded-full px-3 py-1'>+</li>
               </ul>
-              <button className='text-[#196AA0]'>Read More</button>
+              <button className='text-[#196AA0] md:w-max w-[180px]'>Read More</button>
             </div>
           </article>
         ))
